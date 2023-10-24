@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Correo -->
+    <!-- <title>Confirmación de Registro</title> -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="../static/css/login.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- <p>Gracias por registrarte en nuestro sitio. Tu registro ha sido confirmado.</p> -->
+    <!-- Agrega más contenido personalizado según sea necesario -->
+
+    <div class="row">
+        <div class="col-md-6 mx-auto p-0">
+            <div class="card">
+                <form method="POST" action="{%url 'login'%}">
+                    {% csrf_token %}
+                    <div class="login-box">
+                        <div class="login-snip">
+                            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1"
+                                class="tab">Login</label>
+                            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2"
+                                class="tab">Sign Up</label>
+
+                            <div class="login-space">
+                                <div class="login">
+                                    <div class="group">
+                                        <label for="pass" class="label">Email Address</label>
+                                        <input id="pass" name="correoFo" type="text" class="input"
+                                            placeholder="Enter your Email Address" required>
+                                    </div>
+                                    <div class="group">
+                                        <label for="pass" class="label">Password</label>
+                                        <input id="pass" type="password" name="passFo" class="input" data-type="password"
+                                            placeholder="Enter your password" required>
+                                    </div>
+                                    <div class="group">
+                                        <input id="check" type="checkbox" class="check" checked>
+                                        <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                                    </div>
+                                    <div class="group">
+                                        <button type="submit" class="button">Sing In</button>
+                                    </div>
+                                    <div class="hr"></div>
+                                    <div class="foot">
+                                        <a href="#">Forgot Password?</a>
+                                        {% if messages %}
+                                        <div class="messages">
+                                            <ul class="messages-list">
+                                                {% for message in messages %}
+                                                <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{
+                                                    message }}</li>
+                                                    {% endfor %}
+                                            </ul>
+                                        </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                </form>
+                <div class="sign-up-form">
+                    <form method="POST" action="{%url 'form'%}">
+                        {% csrf_token %}
+                        <div class="group">
+                            <label for="user" class="label">Username</label>
+                            <input id="user" type="text" class="input" name="usuario"
+                                placeholder="Create your Username">
+                        </div>
+                        <div class="group">
+                            <label for="pass" class="label">Password</label>
+                            <input id="pass" type="password" class="input" name="pass" data-type="password"
+                                placeholder="Create your password">
+                        </div>
+                        <div class="group">
+                            <label for="pass" class="label">Repeat Password</label>
+                            <input id="pass" type="password" class="input" name="pass" data-type="password"
+                                placeholder="Repeat your password">
+                        </div>
+                        <div class="group">
+                            <label for="pass" class="label">Email Address</label>
+                            <input id="pass" type="text" class="input" name="email"
+                                placeholder="Enter your email address">
+                        </div>
+                        <div class="group">
+                            <button type="submit" class="button" value="Registrar">Registrar</button>
+                            <!-- {{ form.as_p }}
+                            <button type = "submit">Registrarse</button> -->
+                            {% if messages %}
+                            <div class="messages">
+                                <ul class="messages-list">
+                                    {% for message in messages %}
+                                    <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                                        {% endfor %}
+                                </ul>
+                            </div>
+                            {% endif %}
+
+                    </form>
+                </div>
+                <div class="hr"></div>
+                <div class="foot">
+                    <label for="tab-1">Already Member?</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
