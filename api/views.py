@@ -21,6 +21,11 @@ class Inicio(APIView):
     def get(self,request):
         return render(request,self.template_name) 
     
+class power(APIView):
+    template_name="dashboard.html"
+    def get(self,request):
+        return render(request,self.template_name) 
+    
 # class Usuario:
 #     def Usuari(self, nombre, correo, contraseña):
 #         self.nombre = nombre
