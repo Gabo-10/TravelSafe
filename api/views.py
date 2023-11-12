@@ -38,13 +38,14 @@ def registro(request):
         nom = request.POST['usuario']
         contra = request.POST['pass']
         corr = request.POST['email']
+        # matri = request.POST['matricula']
         
         # Verificar si el correo ya está registrado
         if Usuarios.objects.filter(correo=corr).exists():
             messages.error(request, 'El correo ya está registrado')
             return render(request, 'login.html')  # Cambia 'registro.html' al nombre correcto de tu página de registro
         
-        Usuarios(usuario=nom,  correo=corr, contraseña=contra).save()
+        Usuarios(usuario=nom, correo=corr, contraseña=contra).save()
         messages.success(request, 'Usuario registrado exitosamente')
 
         # Verificacion de correo

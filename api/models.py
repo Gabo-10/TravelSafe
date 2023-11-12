@@ -29,6 +29,7 @@ class Usuarios(models.Model):
     usuario = models.CharField(max_length=100,db_column='usuario')
     contraseña = models.CharField(max_length=100,db_column='contraseña')
     correo = models.CharField(max_length=100,db_column='correo')
+    # matricula = models.CharField(max_length=100,db_column='matricula')
     class Meta:
         db_table='Usuarios'
         
