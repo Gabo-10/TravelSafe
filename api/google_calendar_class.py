@@ -99,4 +99,4 @@ calendar = GoogleCalendarManager()
 
 calendar.list_upcoming_events()
 
-calendar.create_event("Derecho a examen","2023-11-17T18:30:00Z","2023-11-17T20:30:00Z","Europe/Madrid",["oscartrujano@teschi.edu.mx"])
+calendar.create_event("Derecho a examen","2023-11-17T18:30:00Z","2023-11-17T20:30:00Z","Europe/Madrid",["2020451026@teschi.edu.mx","mlg.t.8020@gmail.com"])
