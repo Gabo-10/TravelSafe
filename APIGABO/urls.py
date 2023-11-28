@@ -23,6 +23,7 @@ from api import views
 from django.urls import path
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('form/', views.registro ,name='form'),
@@ -31,3 +32,6 @@ urlpatterns = [
     path('index/',Inicio.as_view(),name='index'),
     path('dashboard/',power.as_view(),name='dash')
 ]
+
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns # new
+urlpatterns += staticfiles_urlpatterns() # new
