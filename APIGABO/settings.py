@@ -92,6 +92,8 @@ DATABASES = {
 }
 }
 
+DATABASES = {'default': dj_database_url.config(default='postgres://travel_safe_db_user:0RpAkvvTtR4Wdl2YcjfsLqJkb8MYTlqV@dpg-cln5gr0apebc73f559o0-a.oregon-postgres.render.com/travel_safe_db')}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
