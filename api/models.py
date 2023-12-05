@@ -25,7 +25,7 @@ from django import forms
 
 
 class Usuarios(models.Model):
-    idUsuarios = models.IntegerField(primary_key=True, db_column='id')
+    idUsuarios = models.AutoField(primary_key=True, db_column='id')
     usuario = models.CharField(max_length=100,db_column='usuario')
     contraseña = models.CharField(max_length=100,db_column='contraseña')
     correo = models.CharField(max_length=100,db_column='correo')
